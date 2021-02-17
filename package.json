@@ -1,8 +1,7 @@
 {
   "name": "@arena/common",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.14.28",
