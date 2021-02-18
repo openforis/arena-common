@@ -1,6 +1,6 @@
 {
   "name": "@openforis/arena-common",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "description": "Arena common",
   "typings": "dist/index.d.ts",
@@ -8,6 +8,9 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.14.28",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
@@ -22,11 +25,15 @@
     "version": "git add -A src",
     "format": "prettier --write \"**/*.{js,json,jsx,ts,tsx}\"",
     "format-check": "prettier --check \"**/*.{js,json,jsx,ts,tsx}\"",
-      "lint": "eslint 'src/**/*.{ts,tsx}'",
-      "lint:fix": "npm run lint -- --fix",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
     "postversion": "git push && git push --tags"
   },
   "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint",
+      "prettier --write"
+    ],
     "*.{js,jsx,ts,tsx}": [
       "eslint",
       "prettier --write"
