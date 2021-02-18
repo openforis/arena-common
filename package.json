@@ -1,6 +1,6 @@
 {
   "name": "@openforis/arena-common",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "dist/index.js",
   "description": "Arena common",
   "typings": "dist/index.d.ts",
@@ -26,7 +26,7 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "yarn build",
-    "preversion": "npm run format && npm run lint:fix",
+    "preversion": "npm run format && npm run lint:fix && yarn build",
     "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
