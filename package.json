@@ -11,6 +11,6 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "postInstall": "yarn build"
+    "prepare": "yarn build"
   }
 }
