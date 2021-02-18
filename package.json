@@ -20,18 +20,21 @@
     "build:watch": "tsc --watch",
     "prepare": "yarn build",
     "version": "git add -A src",
+    "format": "prettier --write \"**/*.{js,json,jsx,ts,tsx}\"",
+    "format-check": "prettier --check \"**/*.{js,json,jsx,ts,tsx}\"",
+      "lint": "eslint 'src/**/*.{ts,tsx}'",
+      "lint:fix": "npm run lint -- --fix",
     "postversion": "git push && git push --tags"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint . --cache --fix",
-      "git add"
-    ],
-    "*.{js,ts,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --write"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn lint-staged"
     }
   }
 }
