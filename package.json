@@ -1,6 +1,6 @@
 {
   "name": "@openforis/arena-common",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/index.js",
   "description": "Arena common",
   "typings": "dist/index.d.ts",
@@ -21,12 +21,13 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "prepare": "yarn build",
-    "version": "git add -A src",
     "format": "prettier --write \"**/*.{js,json,jsx,ts,tsx}\"",
     "format-check": "prettier --check \"**/*.{js,json,jsx,ts,tsx}\"",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
+    "prepare": "yarn build",
+    "preversion": "npm run format && npm run lint:fix",
+    "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "lint-staged": {
