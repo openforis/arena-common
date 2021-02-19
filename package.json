@@ -23,7 +23,7 @@
     "typescript": "^4.1.5"
   },
   "scripts": {
-    "test": "echo not implemented but it works",
+    "test": "echo not implemented but it works minor",
     "build": "tsc",
     "build:watch": "tsc --watch",
     "format": "prettier --write \"**/*.{js,json,jsx,ts,tsx}\"",
