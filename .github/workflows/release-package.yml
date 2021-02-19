@@ -13,6 +13,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@openforis'
       - run: yarn
+      - run: yarn version --patch
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
