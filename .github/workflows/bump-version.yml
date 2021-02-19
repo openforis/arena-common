@@ -1,0 +1,18 @@
+name: Arena Common
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          node-version: 14
+
+      - name: Update version in package.json
+        uses: maks-stupak/gh-action-bump-version@v7.1.5
+
