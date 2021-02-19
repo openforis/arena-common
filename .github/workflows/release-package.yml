@@ -1,9 +1,6 @@
- name: Arena Common
+name: Arena Common
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   build:
