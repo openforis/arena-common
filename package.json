@@ -31,8 +31,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepare": "yarn build",
     "preversion": "yarn format && yarn lint:fix && yarn build",
-    "version": "git add -A src",
-    "postversion": "git push && git push --tags"
+    "version": "git add -A src"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
