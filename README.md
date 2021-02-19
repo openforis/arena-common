@@ -24,6 +24,8 @@
 `yarn publish`
 
 
-## How to use the package?
+## How to install the package?
 
-To use the package a Github token is needed, to create and configure one follow the steps into Prerequisites.
+To use the package a Github token is needed, to create and configure one follow the steps into prerequisites.
+
+`yarn add @openforis/arena-common`
